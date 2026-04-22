@@ -1,0 +1,8 @@
+- So sánh HQL và Native Query:
+    + HQL: Truy vấn dựa trên Entity và thuộc tính trong Java,
+    không phụ thuộc vào tên bảng/cột thực tế trong DB
+    + Native Query: Viết trực tiếp SQL theo cú pháp của hệ quản trị CSDL
+- Tại sao HQL an toàn hơn khi cấu hình Database thay đổi?
+-> Khi đổi tên bảng hoặc đổi Dialect, HQL vẫn chạy vì nó dựa trên Entity mapping.
+Hibernate sẽ tự dịch HQL sang SQL phù hợp. Với Native Query, nếu tên bảng/cột thay đổi,
+toàn bộ câu SQL phải sửa thủ công.
